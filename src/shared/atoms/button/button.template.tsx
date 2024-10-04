@@ -1,7 +1,8 @@
 /// <reference types="@kitajs/html/jsx.d.ts" />
 
 import classNames from "classnames";
-import { ButtonIconPosition, ButtonProps, ButtonTag } from "./button.types";
+import { ButtonIconPosition, type ButtonProps, ButtonTag } from "./button.types";
+import { castToString } from "src/_storybook-only/utils/castToString";
 
 function Button({
 	tag = ButtonTag.button,
@@ -48,4 +49,4 @@ function Button({
 	);
 }
 
-export default Button;
+export default castToString(Button);

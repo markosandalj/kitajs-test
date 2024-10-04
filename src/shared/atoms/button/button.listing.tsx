@@ -1,5 +1,6 @@
+import { castToString } from "src/_storybook-only/utils/castToString";
 import Button from "./button.template";
-import { ButtonProps } from "./button.types";
+import { type ButtonProps } from "./button.types";
 
 export type ButtonListingProps = {
 	buttons: Array<ButtonProps>;
@@ -15,4 +16,4 @@ function ButtonListing({ buttons }: ButtonListingProps) {
 	);
 }
 
-export default ButtonListing;
+export default castToString(ButtonListing);

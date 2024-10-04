@@ -46,7 +46,7 @@ interface BaseButtonProps {
 	iconPosition?: ButtonIconPosition;
 	label: string;
 	secondaryLabel?: string;
-	attr?: Record<string, any>;
+	attr?: Record<string, string>;
 }
 
 interface ButtonElementProps extends BaseButtonProps, JSX.HtmlButtonTag {

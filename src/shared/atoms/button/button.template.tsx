@@ -12,6 +12,7 @@ function Button({
 	icon,
 	iconPosition,
 	secondaryLabel,
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	attr,
 	...rest
 }: ButtonProps) {
@@ -23,28 +24,26 @@ function Button({
 		rest.class,
 	);
 
-	const ButtonIcon = icon ? (
+	const buttonIconMarkup = icon ? (
 		<span class="button__icon">
 			<img src={icon} alt="icon" />
 		</span>
 	) : null;
 
-	const ButtonLabel = <span class="button__label js-button-label">{label}</span>;
-
 	return (
 		<tag {...rest} of={tag} class={classes}>
-			{iconPosition === ButtonIconPosition.left ? ButtonIcon : null}
+			{iconPosition === ButtonIconPosition.left ? buttonIconMarkup : null}
 
 			{secondaryLabel ? (
 				<div class="button__label-container">
-					{ButtonLabel}
+					<span class="button__label js-button-label">{label}</span>
 					<span class="button__label button__label--secondary">{secondaryLabel}</span>
 				</div>
 			) : (
-				ButtonLabel
+				buttonIconMarkup
 			)}
 
-			{iconPosition === ButtonIconPosition.right ? ButtonIcon : null}
+			{iconPosition === ButtonIconPosition.right ? buttonIconMarkup : null}
 		</tag>
 	);
 }

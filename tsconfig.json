@@ -24,10 +24,27 @@
                 "./src/shared/*"
             ]
         },
-        "esModuleInterop": true,
-        "strict": true,
         "forceConsistentCasingInFileNames": true,
         "jsx": "react-jsx",
-        "jsxImportSource": "@kitajs/html"
+        "jsxImportSource": "@kitajs/html",
+        "moduleDetection": "force",
+        "module": "Preserve",
+        "target": "ES2021",
+        "moduleResolution": "Node",
+        "allowImportingTsExtensions": false,
+        "resolveJsonModule": true,
+        "allowJs": true,
+        "sourceMap": true,
+        "noEmit": false,
+        "downlevelIteration": true,
+        "verbatimModuleSyntax": true,
+        "esModuleInterop": true,
+        "strict": true,
+        "noImplicitAny": true,
+        "strictNullChecks": true,
+        "noUncheckedIndexedAccess": true,
+        "skipLibCheck": true,
+        "incremental": true,
+        "isolatedModules": true,
     }
 }

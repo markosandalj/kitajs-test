@@ -27,10 +27,7 @@ const meta: Meta<ButtonProps> = {
 };
 export default meta;
 
-type Story = StoryObj<ButtonProps>;
-type ListingStory = StoryObj<ButtonListingProps>;
-
-export const ButtonPrimary: Story = {
+export const ButtonPrimary: StoryObj<ButtonProps> = {
 	render: (args) => <Button {...args} />,
 	args: {
 		variant: ButtonVariant.primary,
@@ -41,18 +38,7 @@ export const ButtonPrimary: Story = {
 	},
 };
 
-export const ButtonListStory: ListingStory = {
+export const ButtonListStory: StoryObj<ButtonListingProps> = {
 	render: (args) => <ButtonListing {...args} />,
 	args: { buttons: buttonsData },
-};
-
-export const ButtonTest: Story = {
-	args: {
-		variant: "primary",
-		color: "dark",
-		label: "Button Primary",
-		tag: "a",
-		size: "extra-small",
-	},
-	render: (args) => <Button {...args} />,
 };

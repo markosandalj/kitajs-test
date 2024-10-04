@@ -33,3 +33,7 @@
 
 -   whenever there is a big standalone component that requires bunch of interactivty and doesn't neccesarily need to be optimized for SEO
 -   unfortunatly we cant use any form of routing so every usecase that requires it is off limits
+
+# Shocase examples
+
+-   raw html pages with live changes in wording

@@ -1,4 +1,4 @@
-import { Preview } from "../src/_storybook-only/utils/storybookTypes";
+import type { Preview } from "@storybook/html";
 
 import "../src/_storybook-only/storybook-only.ts";
 import { useEffect } from "@storybook/addons";

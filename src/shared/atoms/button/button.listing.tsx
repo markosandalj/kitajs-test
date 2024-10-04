@@ -1,4 +1,4 @@
-import { castToString } from "src/_storybook-only/utils/castToString";
+import { castToString } from "../../../_storybook-only/utils/castToString";
 import Button from "./button.template";
 import { type ButtonProps } from "./button.types";
 

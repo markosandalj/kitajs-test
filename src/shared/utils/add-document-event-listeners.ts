@@ -1,8 +1,8 @@
 import {
 	initializeClassComponents,
 	initializeWebComponents,
-	ClassComponentConfiguration,
-	WebComponentConfiguration,
+	type ClassComponentConfiguration,
+	type WebComponentConfiguration,
 } from "./initialize-components";
 
 type Props = {

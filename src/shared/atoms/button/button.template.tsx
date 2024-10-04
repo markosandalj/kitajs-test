@@ -2,7 +2,7 @@
 
 import classNames from "classnames";
 import { ButtonIconPosition, type ButtonProps, ButtonTag } from "./button.types";
-import { castToString } from "src/_storybook-only/utils/castToString";
+import { castToString } from "../../../_storybook-only/utils/castToString";
 
 function Button({
 	tag = ButtonTag.button,
@@ -25,15 +25,17 @@ function Button({
 		rest.class,
 	);
 
-	const buttonIconMarkup = icon ? (
+	const ButtonIcon = icon ? (
 		<span class="button__icon">
 			<img src={icon} alt="icon" />
 		</span>
 	) : null;
 
+	const ButtonLabel = <span class="button__label js-button-label">{label}</span>;
+
 	return (
 		<tag {...rest} of={tag} class={classes}>
-			{iconPosition === ButtonIconPosition.left ? buttonIconMarkup : null}
+			{iconPosition === ButtonIconPosition.left ? ButtonIcon : null}
 
 			{secondaryLabel ? (
 				<div class="button__label-container">
@@ -41,10 +43,10 @@ function Button({
 					<span class="button__label button__label--secondary">{secondaryLabel}</span>
 				</div>
 			) : (
-				buttonIconMarkup
+				ButtonLabel
 			)}
 
-			{iconPosition === ButtonIconPosition.right ? buttonIconMarkup : null}
+			{iconPosition === ButtonIconPosition.right ? ButtonIcon : null}
 		</tag>
 	);
 }

@@ -1,9 +1,8 @@
-import type { Meta, StoryObj } from "@storybook/html";
 import Button from "./button.template";
 import { ButtonColor, ButtonProps, ButtonSize, ButtonTag, ButtonVariant } from "./button.types";
 import ButtonListing, { ButtonListingProps } from "./button.listing";
 import buttonsData from "./button.data";
-import { castToString } from "src/_storybook-only/utils/castToString";
+import type { Meta, StoryObj } from "src/_storybook-only/utils/storybookTypes";
 
 const meta: Meta<ButtonProps> = {
 	title: "01 Style Guide/Button",
@@ -28,13 +27,17 @@ const meta: Meta<ButtonProps> = {
 };
 export default meta;
 
-type Story = StoryObj<ButtonProps>;
-type ListingStory = StoryObj<ButtonListingProps>;
+type Story = Omit<StoryObj<ButtonProps>, "render"> & {
+	render: (args: ButtonProps) => JSX.Element;
+};
 
-const a = <Button variant="primary" color="blue" label="Button Primary" tag="a" size="extra-small" />;
+type CutomStory<T> = Omit<StoryObj<T>, "render"> & {
+	render: (args: T) => JSX.Element;
+};
+type ListingStory = CutomStory<ButtonListingProps>;
 
 export const ButtonPrimary: Story = {
-	render: (args) => castToString(<Button {...args} />),
+	render: (args) => <Button {...args} />,
 	args: {
 		variant: ButtonVariant.primary,
 		color: "blue",

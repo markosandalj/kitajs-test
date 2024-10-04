@@ -1,3 +1,5 @@
+import type { PropsWithChildren } from "@kitajs/html";
+
 export const ButtonVariant = {
 	primary: "primary",
 	secondary: "secondary",
@@ -57,4 +59,4 @@ interface ButtonLinkProps extends BaseButtonProps, JSX.HtmlAnchorTag {
 	tag: "a";
 }
 
-export type ButtonProps = ButtonElementProps | ButtonLinkProps;
+export type ButtonProps = PropsWithChildren & (ButtonElementProps | ButtonLinkProps);

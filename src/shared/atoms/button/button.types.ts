@@ -1,38 +1,42 @@
-import { Component, PropsWithChildren } from "@kitajs/html";
+export const ButtonVariant = {
+	primary: "primary",
+	secondary: "secondary",
+	tertiary: "tertiary",
+} as const;
+export type ButtonVariant = (typeof ButtonVariant)[keyof typeof ButtonVariant];
 
-export enum ButtonVariant {
-	primary = "primary",
-	secondary = "secondary",
-	tertiary = "tertiary",
-}
+export const ButtonColor = {
+	red: "red",
+	redGradient: "red-gradient",
+	light: "light",
+	dark: "dark",
+	blue: "blue",
+	grey: "grey",
+} as const;
 
-export enum ButtonColor {
-	red = "red",
-	redGradient = "red-gradient",
-	light = "light",
-	dark = "dark",
-	blue = "blue",
-	grey = "grey",
-}
+export type ButtonColor = (typeof ButtonColor)[keyof typeof ButtonColor];
 
-export enum ButtonSize {
-	small = "small",
-	extraSmall = "extra-small",
-	tiny = "tiny",
-	squared = "squared",
-	noPadding = "no-padding",
-	fullWidth = "full-width",
-}
+export const ButtonSize = {
+	small: "small",
+	extraSmall: "extra-small",
+	tiny: "tiny",
+	squared: "squared",
+	noPadding: "no-padding",
+	fullWidth: "full-width",
+} as const;
+export type ButtonSize = (typeof ButtonSize)[keyof typeof ButtonSize];
 
-export enum ButtonIconPosition {
-	left = "left",
-	right = "right",
-}
+export const ButtonIconPosition = {
+	left: "left",
+	right: "right",
+} as const;
+export type ButtonIconPosition = (typeof ButtonIconPosition)[keyof typeof ButtonIconPosition];
 
-export enum ButtonTag {
-	button = "button",
-	link = "a",
-}
+export const ButtonTag = {
+	button: "button",
+	link: "a",
+} as const;
+export type ButtonTag = (typeof ButtonTag)[keyof typeof ButtonTag];
 
 interface BaseButtonProps {
 	variant: ButtonVariant;
@@ -46,11 +50,11 @@ interface BaseButtonProps {
 }
 
 interface ButtonElementProps extends BaseButtonProps, JSX.HtmlButtonTag {
-	tag: ButtonTag.button;
+	tag: "button";
 }
 
 interface ButtonLinkProps extends BaseButtonProps, JSX.HtmlAnchorTag {
-	tag: ButtonTag.link;
+	tag: "a";
 }
 
 export type ButtonProps = ButtonElementProps | ButtonLinkProps;

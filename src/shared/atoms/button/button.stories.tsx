@@ -31,15 +31,29 @@ type Story = StoryObj<ButtonProps>;
 type ListingStory = StoryObj<ButtonListingProps>;
 
 export const ButtonPrimary: Story = {
-	render: (args) => Button(args) as string,
+	render: (args) => <Button {...args} />,
 	args: {
 		variant: ButtonVariant.primary,
-		color: ButtonColor.red,
+		color: "blue",
 		label: "Button Primary",
+		tag: "a",
+		size: "extra-small",
 	},
 };
 
 export const ButtonListStory: ListingStory = {
-	render: (args) => ButtonListing(args) as string,
+	render: (args) => <ButtonListing {...args} />,
 	args: { buttons: buttonsData },
+};
+
+export const ButtonTest: Story = {
+	args: {
+		variant: "primary",
+		color: "dark",
+		label: "Button Primary",
+		tag: "a",
+		size: "extra-small",
+	},
+
+	render: (args) => Button(args) as string,
 };

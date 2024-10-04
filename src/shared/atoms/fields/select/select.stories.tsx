@@ -13,10 +13,11 @@ export default meta;
 type Story = StoryObj<SelectProps>;
 
 export const SelectStory: Story = {
-	render: (args) => Select(args) as string,
+	render: (args) => <Select {...args} />,
 	args: {
 		name: "select",
-		id: "select",
+		// id: "select",
+		placeholder: "Select",
 		label: "Select",
 		helpText: "This is a help text",
 		options: [

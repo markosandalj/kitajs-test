@@ -1,7 +1,3 @@
-import { ReactNode as OriginalReactNode } from "react";
-
-declare global {
-	namespace React {
-		type ReactNode = string | Promise<string>;
-	}
+declare namespace JSX {
+	type Element = string;
 }

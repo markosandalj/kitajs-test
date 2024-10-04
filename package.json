@@ -12,12 +12,15 @@
         "test": "xss-scan",
         "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
     },
+    "packageManager": "pnpm@9.1.2",
     "dependencies": {
         "@kitajs/ts-html-plugin": "^4.1.0",
         "class-variance-authority": "^0.7.0",
         "clsx": "^2.1.1",
         "lit": "^3.2.0",
-        "remeda": "^2.14.0"
+        "remeda": "^2.14.0",
+        "zod": "^3.23.8",
+        "zustand": "5.0.0-rc.2"
     },
     "devDependencies": {
         "@chromatic-com/storybook": "^1.9.0",

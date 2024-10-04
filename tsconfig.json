@@ -1,36 +1,50 @@
 {
-	"compilerOptions": {
-		"baseUrl": ".",
-		"paths": {
-			"global": ["./global.d.ts"],
-			"@fonts/*": ["./public/fonts/*"],
-			"@images/*": ["./public/images/*"],
-			"@icons/*": ["./public/icons/*"],
-			"@company-web/*": ["./src/company-web/*"],
-			"@webshop/*": ["./src/webshop/*"],
-			"@shared/*": ["./src/shared/*"]
-		},
-		"forceConsistentCasingInFileNames": true,
-		"jsx": "react-jsx",
-		"jsxImportSource": "@kitajs/html",
-		"moduleDetection": "force",
-		"module": "Preserve",
-		"target": "ES2021",
-		"moduleResolution": "Node",
-		"allowImportingTsExtensions": false,
-		"resolveJsonModule": true,
-		"allowJs": true,
-		"sourceMap": true,
-		"noEmit": false,
-		"downlevelIteration": true,
-		"verbatimModuleSyntax": true,
-		"esModuleInterop": true,
-		"strict": true,
-		"noImplicitAny": true,
-		"strictNullChecks": true,
-		"noUncheckedIndexedAccess": true,
-		"skipLibCheck": true,
-		"incremental": true,
-		"isolatedModules": true
-	}
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "global": [
+                "./global.d.ts"
+            ],
+            "@fonts/*": [
+                "./public/fonts/*"
+            ],
+            "@images/*": [
+                "./public/images/*"
+            ],
+            "@icons/*": [
+                "./public/icons/*"
+            ],
+            "@company-web/*": [
+                "./src/company-web/*"
+            ],
+            "@webshop/*": [
+                "./src/webshop/*"
+            ],
+            "@shared/*": [
+                "./src/shared/*"
+            ]
+        },
+        "forceConsistentCasingInFileNames": true,
+        "jsx": "react-jsx",
+        "jsxImportSource": "@kitajs/html",
+        "moduleDetection": "force",
+        "module": "Preserve",
+        "target": "ES2021",
+        "moduleResolution": "Node",
+        "allowImportingTsExtensions": false,
+        "resolveJsonModule": true,
+        "allowJs": true,
+        "sourceMap": true,
+        "noEmit": false,
+        "downlevelIteration": true,
+        "verbatimModuleSyntax": true,
+        "esModuleInterop": true,
+        "strict": true,
+        "noImplicitAny": true,
+        "strictNullChecks": true,
+        "noUncheckedIndexedAccess": true,
+        "skipLibCheck": true,
+        "incremental": true,
+        "isolatedModules": true
+    }
 }

@@ -1,7 +1,8 @@
 import Button from "@shared/atoms/button/button.template";
 import type { TestProps } from "./test.types";
+import { castToString } from "src/_storybook-only/utils/castToString";
 
-export default function Test({ buttonHref, buttonLabel, description, title }: TestProps) {
+function Test({ buttonHref, buttonLabel, description, title }: TestProps) {
 	return (
 		<div>
 			<h1>{title}</h1>
@@ -10,3 +11,5 @@ export default function Test({ buttonHref, buttonLabel, description, title }: Te
 		</div>
 	);
 }
+
+export default castToString(Test);

@@ -4,7 +4,7 @@ import {
 	fieldHelpTextClasses,
 	fieldInputClasses,
 	fieldLabelClasses,
-	FieldBaseProps,
+	type FieldBaseProps,
 } from "../field-base.types";
 
 export type CheckboxProps = {
@@ -52,7 +52,6 @@ function Checkbox({
 				<span class="field-checkbox__indicator"></span>
 				<span class="field-checkbox__backdrop"></span>
 			</label>
-
 			{helpText && <div class={helpTextClasses}>{helpText}</div>}
 		</div>
 	);

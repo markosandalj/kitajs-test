@@ -1,0 +1,82 @@
+$font-global-path: "../fonts" !default;
+$weights: (
+    Light: 300,
+    Regular: 400,
+    Bold: 700
+);
+
+/*
+|--------------------------------------------------------------------------
+| Sans
+|--------------------------------------------------------------------------
+*/
+
+@each $name,
+$weight in $weights {
+    @font-face {
+        font-family: 'a1';
+        src: local('a1'),
+        url('#{$font-global-path}/A1SansV5-#{$name}.woff') format('woff'),
+        url('#{$font-global-path}/A1SansV5-#{$name}.ttf') format('truetype');
+        font-weight: #{$weight};
+        font-style: normal;
+        font-display: swap;
+    }
+}
+
+/*
+ |--------------------------------------------------------------------------
+ | Sans condensed
+ |--------------------------------------------------------------------------
+*/
+
+@each $name,
+$weight in $weights {
+    @font-face {
+        font-family: 'a1-condensed';
+        src: local('a1-condensed'),
+        url('#{$font-global-path}/A1SansCondV5-#{$name}.woff') format('woff'),
+        url('#{$font-global-path}/A1SansCondV5-#{$name}.ttf') format('truetype');
+        font-weight: #{$weight};
+        font-style: normal;
+        font-display: swap;
+    }
+}
+
+/*
+ |--------------------------------------------------------------------------
+ | Serif
+ |--------------------------------------------------------------------------
+*/
+
+@each $name,
+$weight in $weights {
+    @font-face {
+        font-family: 'a1-serif';
+        src: local('a1-serif'),
+        url('#{$font-global-path}/A1SerifV5-#{$name}.woff') format('woff'),
+        url('#{$font-global-path}/A1SerifV5-#{$name}.ttf') format('truetype');
+        font-weight: #{$weight};
+        font-style: normal;
+        font-display: swap;
+    }
+}
+
+$weights-lore: (
+    Bold: 700,
+    BoldAlternates: 600,
+    Regular: 400,
+    RegularAlternates: 300
+);
+
+@each $name,
+$weight in $weights-lore {
+    @font-face {
+        font-family: 'LORE';
+        src: local('LORE'),
+        url('#{$font-global-path}/LORE-#{$name}.ttf') format('truetype');
+        font-weight: #{$weight};
+        font-style: normal;
+        font-display: swap;
+    }
+}

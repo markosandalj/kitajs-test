@@ -1,0 +1,112 @@
+.field-checkbox {
+    $root: &;
+
+    &[hidden] {
+        display: none;
+    }
+
+    display: flex;
+    gap: 1.25rem;
+    padding-left: 2.5rem;
+    position: relative;
+
+    &__input {
+        position: relative;
+        margin: 0;
+        position: absolute;
+        left: -9999px;
+        width: 0.1px;
+        height: 0.1px;
+        opacity: 0;
+        overflow: hidden;
+        position: absolute;
+        z-index: -1;
+
+        &:checked,
+        &[checked="checked"] {
+            ~ #{$root}__indicator {
+                --_border-color: var(--_selected-border-color);
+                background-color: var(--_border-color);
+
+                &:after {
+                    content: '';
+                    background-image: url('https://ssc.a1.hr/documents/10307706/1449352362/icon-ok.png/d4c7b04b-9432-3cb6-712e-a155145e9ff5?t=1689760969711');
+                    object-fit: fill;
+                    object-position: center;
+                    background-position: center;
+                    background-size: 1.125rem 1.125rem;
+                    max-width: 1.125rem;
+                    min-width: 1.125rem;
+                    min-height: 1.125rem;
+                    max-height: 1.125rem;
+                }
+            }
+        }
+
+        &:hover:not(:disabled),
+        &:focus:not(:disabled) {
+            #{$root}__backdrop {
+                display: block;
+            }
+        }
+    }
+
+    &__wrapper {
+        padding-left: 0 !important; // neccessary override
+        padding-top: 1px !important;
+        padding-bottom: 1px !important;
+        margin: 0 !important;
+    }
+
+    &__backdrop {
+        position: absolute;
+        left: 0;
+        top: 0;
+        transform: translate(-21%, -21%);
+        width: 2.5rem;
+        height: 2.5rem;
+        opacity: 0.1;
+        background-color: var(--_border-color);
+        border-radius: 50%;
+        display: none;
+    }
+
+    &__indicator {
+        min-width: 1.5rem;
+        max-width: 1.5rem;
+        max-height: 1.5rem;
+        min-height: 1.5rem;
+        background-color: transparent;
+        border: 0.125rem solid var(--_border-color);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        backface-visibility: hidden;
+        border-radius: 0.25rem;
+
+        &:after {
+            filter: invert(100%) sepia(4%) saturate(0%) hue-rotate(331deg) brightness(106%) contrast(105%);
+            color: var(--grey-100);
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+            position: absolute;
+        }
+    }
+
+    &:not(.disabled) {
+
+        #{$root}__label,
+        #{$root}__indicator {
+            cursor: pointer;
+
+            &:hover {
+                ~ #{$root}__backdrop {
+                    display: block;
+                }
+            }
+        }
+    }
+}

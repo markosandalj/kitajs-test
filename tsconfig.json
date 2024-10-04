@@ -1,0 +1,35 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "@fonts/*": [
+                "./public/fonts/*"
+            ],
+            "@images/*": [
+                "./public/images/*"
+            ],
+            "@icons/*": [
+                "./public/icons/*"
+            ],
+            "@company-web/*": [
+                "./src/company-web/*"
+            ],
+            "@webshop/*": [
+                "./src/webshop/*"
+            ],
+            "@shared/*": [
+                "./src/shared/*"
+            ]
+        },
+        "esModuleInterop": true,
+        "strict": true,
+        "forceConsistentCasingInFileNames": true,
+        "jsx": "react-jsx",
+        "jsxImportSource": "@kitajs/html",
+        "plugins": [
+            {
+                "name": "@kitajs/ts-html-plugin"
+            }
+        ]
+    }
+}

@@ -1,0 +1,212 @@
+.field {
+    // LIGHT BACKGROUNDS
+    --_light-border-color: var(--grey-600);
+    --_light-text-color: var(--grey-600);
+    --_light-label-text-color: var(--grey-600);
+    --_light-background-color: transparent;
+    --_light-label-text-color: var(--grey-600);
+    --_light-label-background-color: var(--grey-100);
+
+    --_light-selected-color: var(--blue-500);
+    --_light-selected-border-color: var(--_light-selected-color);
+    --_light-selected-text-color: var(--_light-selected-color);
+    --_light-selected-background-color: var(--_light-background-color);
+    --_light-selected-label-text-color: var(--_light-selected-text-color);
+    --_light-selected-label-background-color: var(--_light-label-background-color);
+
+    --_light-error-color: var(--red-400);
+    --_light-error-border-color: var(--_light-error-color);
+    --_light-error-text-color: var(--_light-error-color);
+    --_light-error-background-color: var(--_light-background-color);
+    --_light-error-label-text-color: var(--_light-error-text-color);
+    --_light-error-label-background-color: var(--_light-label-background-color);
+
+    --_light-disabled-color: var(--grey-600);
+    --_label-disabled-border-color: transparent;
+    --_light-disabled-text-color: var(--grey-600);
+    --_light-disabled-background-color: var(--grey-100);
+    --_light-disabled-label-text-color: var(--_light-disabled-text-color);
+    --_light-disabled-label-background-color: transparent;
+
+    // DARK BACKGROUNDS
+    --_dark-border-color: var(--grey-200);
+    --_dark-text-color: var(--grey-300);
+    --_dark-background-color: transparent;
+    --_dark-label-text-color: var(--grey-100);
+    --_dark-label-background-color: var(--grey-900);
+
+    --_dark-selected-color: var(--blue-200);
+    --_dark-selected-border-color: var(--_dark-selected-color);
+    --_dark-selected-text-color: var(--_dark-selected-color);
+    --_dark-selected-label-text-color: var(--_dark-label-text-color);
+    --_dark-selected-label-background-color: var(--_dark-label-background-color);
+
+    --_dark-error-color: var(--red-400);
+    --_dark-error-border-color: var(--_dark-error-color);
+    --_dark-error-text-color: var(--_dark-error-color);
+    --_dark-error-label-text-color: var(--_dark-label-text-color);
+    --_dark-error-label-background-color: var(--_dark-label-background-color);
+
+    --_dark-disabled-color: var(--white);
+    --_dark-disabled-border-color: var(--_dark-disabled-color);
+    --_dark-disabled-text-color: var(--_dark-disabled-color);
+    --_dark-disabled-label-text-color: var(--_dark-disabled-text-color);
+    --_dark-disabled-label-background-color: var(--_dark-label-background-color);
+
+    --_dark-label-color: var(--white);
+    --_dark-label-border-color: var(--_dark-label-color);
+    --_dark-label-text-color: var(--_dark-label-color);
+    --_dark-disabled-color: var(--white);
+    --_dark-disabled-border-color: var(--_dark-disabled-color);
+    --_dark-disabled-text-color: var(--_dark-disabled-color);
+    --_dark-disabled-label-text-color: var(--_dark-disabled-text-color);
+    --_dark-disabled-label-background-color: var(--_dark-label-background-color);
+
+
+    // RED BACKGROUNDS
+    --_red-border-color: var(--grey-100);
+    --_red-text-color: var(--grey-900);
+    --_red-background-color: var(--grey-100);
+    --_red-label-text-color: var(--_red-border-color);
+    --_red-label-background-color: var(--red-500);
+
+    --_red-selected-color: var(--blue-600);
+    --_red-selected-border-color: var(--_red-selected-color);
+    --_red-selected-text-color: var(--_red-selected-color);
+    --_red-selected-label-text-color: var(--_red-selected-text-color);
+    --_red-selected-label-background-color: var(--_red-label-background-color);
+
+    --_red-error-color: var(--red-400);
+    --_red-error-border-color: var(--_red-error-color);
+    --_red-error-text-color: var(--_red-error-color);
+    --_red-error-label-text-color: var(--_red-error-text-color);
+    --_red-error-label-background-color: var(--_red-label-background-color);
+
+    --_red-disabled-color: var(--white);
+    --_red-disabled-border-color: var(--_red-disabled-color);
+    --_red-disabled-text-color: var(--_red-disabled-color);
+    --_red-disabled-label-text-color: var(--_red-disabled-text-color);
+    --_red-disabled-label-background-color: var(--_red-label-background-color);
+
+    // BASE
+    --_border-color: var(--_light-border-color);
+    --_text-color: var(--_light-text-color);
+    --_background-color: var(--_light-background-color);
+    --_label-text-color: var(--_light-label-text-color);
+    --_label-background-color: var(--_light-label-background-color);
+
+    --_selected-color: var(--blue-400);
+    --_selected-border-color: var(--_selected-color);
+    --_selected-text-color: var(--_selected-color);
+    --_selected-background-color: var(--_background-color);
+    --_selected-label-text-color: var(--_selected-color);
+    --_selected-label-background-color: var(--_light-disabled-label-background-color);
+
+    --_error-color: var(--red-400);
+    --_error-border-color: var(--_error-color);
+    --_error-text-color: var(--_error-color);
+    --_error-background-color: var(--_background-color);
+    --_error-label-text-color: var(--_error-color);
+    --_error-label-background-color: var(--_light-disabled-label-background-color);
+
+    --_disabled-color: var(--_light-disabled-color);
+    --_disabled-border-color: var(--_disabled-color);
+    --_disabled-text-color: var(--_disabled-color);
+    --_disabled-background-color: var(--_light-disabled-background-color);
+    --_disabled-label-text-color: var(--_disabled-color);
+    --_disabled-label-background-color: var(--_light-disabled-label-background-color);
+
+    --_label-color: var(--_light-label-color);
+    --_disabled-color: var(--_light-disabled-color);
+    --_disabled-border-color: transparent;
+    --_disabled-text-color: var(--_light-disabled-text-color);
+    --_disabled-background-color: var(--_light-disabled-background-color);
+    --_disabled-label-text-color: var(--_disabled-color);
+    --_disabled-label-background-color: var(--_light-disabled-label-background-color);
+
+    &[hidden] {
+        display: none;
+    }
+
+    &.disabled {
+        opacity: 0.4;
+        --_background-color: var(--_disabled-background-color);
+        --_border-color: var(--_disabled-border-color);
+        --_label-background-color: var(--_disabled-label-background-color);
+        --_label-text-color: var(--_disabled-label-text-color);
+        --_text-color: var(--_disabled-text-color);
+
+        &,
+        > * {
+            pointer-events: none;
+            cursor: not-allowed;
+        }
+    }
+
+    &.has-error,
+    input:not(:focus).has-error {
+        // @todo: at some point this two lines should be removed but since there is too much leftover code this is needed to override things
+        --_border-color: var(--_error-border-color);
+        --_text-color: var(--_error-text-color);
+        --_label-text-color: var(--_error-label-text-color);
+    }
+
+    &.light {
+        --_border-color: var(--_light-border-color);
+        --_text-color: var(--_light-text-color);
+        --_background-color: var(--_light-background-color);
+        --_label-text-color: var(--_light-label-text-color);
+        --_label-background-color: var(--_light-label-background-color);
+
+        --_selected-color: var(--_light-selected-color);
+        --_error-color: var(--_light-error-color);
+        --_disabled-color: var(--_light-disabled-color);
+    }
+
+    &.dark {
+        --_border-color: var(--_dark-border-color);
+        --_text-color: var(--_dark-text-color);
+        --_background-color: var(--_dark-background-color);
+        --_label-text-color: var(--_dark-label-text-color);
+        --_label-background-color: var(--_dark-label-background-color);
+
+        --_selected-color: var(--_dark-selected-color);
+        --_error-color: var(--_dark-error-color);
+        --_disabled-color: var(--_dark-disabled-color);
+    }
+
+    &.red {
+        --_border-color: var(--_red-border-color);
+        --_text-color: var(--_red-text-color);
+        --_background-color: var(--_red-background-color);
+        --_label-text-color: var(--_red-label-text-color);
+        --_label-background-color: var(--_red-label-background-color);
+
+        --_selected-color: var(--_red-selected-color);
+        --_error-color: var(--_red-error-color);
+        --_disabled-color: var(--_red-disabled-color);
+    }
+
+    &--half-width {
+        max-width: 50%;
+    }
+
+    &--third-width {
+        max-width: 33%;
+    }
+
+    &--two-fifths-width {
+        max-width: 40%;
+    }
+
+    &__input {
+        &:focus-visible {
+            outline: none;
+        }
+    }
+
+    label,
+    input {
+        margin: 0;
+    }
+}

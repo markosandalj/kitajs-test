@@ -1,0 +1,26 @@
+.features-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.125rem;
+    padding: 1.125rem 0;
+
+    &__item {
+        display: flex;
+        gap: .5rem;
+
+        &-icon {
+            min-width: 1.5rem;
+            max-width: 1.5rem;
+            min-height: 1.5rem;
+            max-height: 1.5rem;
+
+            svg,
+            img {
+                min-width: 1.5rem;
+                max-width: 1.5rem;
+                min-height: 1.5rem;
+                max-height: 1.5rem;
+            }
+        }
+    }
+}

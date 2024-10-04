@@ -1,0 +1,67 @@
+.link {
+    text-decoration: underline;
+    display: inline-block;
+    text-align: left;
+    cursor: pointer;
+
+    &:hover {
+        text-decoration: underline;
+        color: var(--blue-600);
+    }
+
+    &:focus {
+        color: inherit;
+        text-decoration: underline;
+    }
+
+    &.disabled {
+        opacity: 0.4;
+        cursor: not-allowed;
+    }
+
+    &--black {
+        color: var(--grey-900);
+
+        &:hover:not(.disabled) {
+            color: var(--grey-700);
+        }
+    }
+
+    &--grey {
+        color: var(--grey-700);
+
+        &:hover:not(.disabled) {
+            color: var(--grey-600);
+        }
+    }
+
+    &--blue {
+        color: var(--blue-500);
+
+        &:hover:not(.disabled) {
+            color: var(--blue-400);
+        }
+    }
+
+    &--white {
+        color: var(--grey-100);
+
+        &:hover:not(.disabled) {
+            color: var(--grey-100);
+        }
+    }
+
+    &--no-underline {
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    &--centered {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

@@ -1,0 +1,146 @@
+.location-autocomplete {
+
+    .Form-field input,
+    .Form-field [contenteditable] {
+        background: white !important;
+        border: 1px solid var(--grey-600) !important;
+        min-height: 55px;
+
+        &.has-error {
+            border: 1px solid var(--primary) !important;
+        }
+
+        &[disabled] {
+            pointer-events: none !important;
+            opacity: 0.3;
+            -webkit-user-modify: read-only;
+        }
+    }
+
+    [contenteditable]#TechnologyAvailabilityForm_Street {
+        margin-bottom: 1rem;
+    }
+
+    h2 {
+        @include media-breakpoint-down(md) {
+            font-size: 2.25rem;
+        }
+
+        @include media-breakpoint-down(sm) {
+            font-size: 1.75rem;
+        }
+    }
+
+    .has-suggestions {
+        position: relative;
+
+        .suggestions-wrapper {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            list-style-type: none;
+            padding: 0.75rem 0;
+            box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            z-index: 999;
+            background: var(--white);
+
+            &.hidden {
+                display: none;
+            }
+
+            .suggestion {
+                padding: 0.5rem 1.25rem;
+
+                &:focus,
+                &:hover,
+                &.focused {
+                    background-color: rgba(var(--blue-500), 0.1);
+                }
+
+                cursor: pointer;
+            }
+        }
+    }
+
+    .has-error + .suggestions-wrapper {
+        margin-top: -26px;
+    }
+
+    .alternative-locations {
+        list-style-type: none;
+        padding: 0;
+
+        & + * {
+            margin-top: 2rem;
+        }
+
+        .location {
+            border: 1px solid #212121;
+            border-radius: 4px;
+            transition: border-color 0.3s ease;
+            padding: 0.8rem 1.25rem;
+            cursor: pointer;
+
+            &:hover {
+                border-color: #d92a1c;
+            }
+
+            + .location {
+                margin-top: 1rem;
+            }
+        }
+    }
+
+    @media (max-width: 1023px) {
+        .location-autocomplete-step-2 {
+            .row {
+                justify-content: space-between;
+
+                > * {
+                    max-width: calc(50% - 5px) !important;
+                    flex-grow: 1;
+                    padding: 0;
+                    margin: 0;
+                }
+            }
+
+            .Button {
+                padding: 11px 10px !important;
+                margin-top: 18px;
+                display: flex;
+                justify-content: center;
+
+                &-label {
+                    font-size: 16px !important;
+                    line-height: 31px;
+                }
+            }
+        }
+    }
+
+    [contentEditable][placeholder]:empty::after {
+        content: attr(placeholder);
+        color: $gray-30;
+        font-weight: normal;
+        display: block;
+    }
+
+    &__hidden {
+        display: none;
+    }
+
+    &.disabled {
+        .field {
+            pointer-events: none;
+            cursor: default;
+
+            &-text__input {
+                background: $gray-20 !important;
+                border-color: $gray-20 !important;
+                color: $gray-300 !important;
+            }
+        }
+    }
+}

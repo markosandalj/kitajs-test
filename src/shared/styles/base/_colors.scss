@@ -1,0 +1,131 @@
+// old colors should be deleted at some point when we are sure they are not needed anymore
+// OLD COLORS - start
+
+// Primary
+$white: #ffffff;
+$black: #000000;
+$black-alt: #333333;
+$red: #EB140A;
+$red-dark: #980202;
+$red-alt: #f83a2c;
+$red-error: #EB140A;
+$yellow: #ffb402;
+$blue: #551EE6;
+$blue-light: #6964FF;
+$green: #96c916;
+$green-correct: #00983d;
+$red-incorrect: #dd1111;
+
+// Secondary
+$gray-main: #f7f7f7;
+$gray-10: #fcfcfc;
+$gray-20: #efefef;
+$gray-30: #d7d7d7;
+$gray-40: #bbbbbb;
+$gray-50: #808080;
+$gray-60: #585858;
+$gray-70: #666666;
+$gray-80: #999999;
+
+// Simmilar as blue, just has specific use for banners and will have unique name so can be easy changable.
+$blue-banner: #551EE6;
+$moazik-blue: #a8c6ff;
+
+// OLD COLORS - end
+
+$primary: #EB140A;
+$white: #ffffff;
+$black: #000000;
+
+$red-100: #ffeae8;
+$red-200: #fdc9c4;
+$red-300: #fa8a80;
+$red-400: #ff372d;
+$red-600: #b90a05;
+$red-700: #820000;
+$red-800: #DA291C;
+
+$grey-100: #ffffff;
+$grey-200: #f7f7f7;
+$grey-300: #f2f2f2;
+$grey-400: #dddddd;
+$grey-500: #bcbcbc;
+$grey-600: #999999;
+$grey-700: #666666;
+$grey-800: #333333;
+$grey-900: #000000;
+
+$blue-100: #f3f5fa;
+$blue-200: #e7eaf7;
+$blue-300: #a0aff0;
+$blue-400: #6964ff;
+$blue-500: #551ee6;
+$blue-600: #321e74;
+
+$gradient-red-100: linear-gradient(86.73deg, #d01007 0%, #eb140a 100%);
+$gradient-red-200: linear-gradient(114.5deg, #e81409 1.33%, #460000 98.92%), #ffffff;
+$gradient-blue: linear-gradient(90deg, #3f1ee2 0%, #551EE6 100%);
+
+:root,
+*::after,
+*::before,
+*:hover,
+*:focus,
+*:focus-visible,
+*:focus-within {
+
+    --primary: #{$primary};
+    --white: #{$white};
+    --black: #{$black};
+
+    --red-100: #{$red-100};
+    --red-200: #{$red-200};
+    --red-300: #{$red-300};
+    --red-400: #{$red-400};
+    --red-600: #{$red-600};
+    --red-700: #{$red-700};
+    --red-800: #{$red-800};
+
+    --grey-100: #{$grey-100};
+    --grey-200: #{$grey-200};
+    --grey-300: #{$grey-300};
+    --grey-400: #{$grey-400};
+    --grey-500: #{$grey-500};
+    --grey-600: #{$grey-600};
+    --grey-700: #{$grey-700};
+    --grey-800: #{$grey-800};
+    --grey-900: #{$grey-900};
+
+    --blue-100: #{$blue-100};
+    --blue-200: #{$blue-200};
+    --blue-300: #{$blue-300};
+    --blue-400: #{$blue-400};
+    --blue-500: #{$blue-500};
+    --blue-600: #{$blue-600};
+
+    --gradient-red-100: #{$gradient-red-100};
+    --gradient-red-200: #{$gradient-red-200};
+    --gradient-blue: #{$gradient-blue};
+
+    --border-radius-xs: 0.25rem;
+    --border-radius-sm: 0.5rem;
+    --border-radius-md: 1rem;
+    --border-radius-l: 1.5rem;
+    --border-radius-xl: 2rem;
+
+    --option-spacing: 1.5rem;
+    --option-border-color: var(--grey-300);
+    --option-disabled-border-color: ;
+    --option-focus-border-color: var(--blue-500);
+    --option-focus-outline-color: rgba(85, 30, 230, 0.4);
+    --option-border-radius: var(--border-radius-md);
+    --option-indicator-size: 30px;
+    --option-indicator-color: ;
+    --option-indicator-selected-color: ;
+    --option-indicator-disabled-color: ;
+    --option-title-color: var(--gray-900);
+    --option-description-color: var(--grey-700);
+    --option-label-color: var(--blue-500);
+    --option-transition: border 0.2s ease;
+    --option-crossed-price-color: var(--grey-600);
+}

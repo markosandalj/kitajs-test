@@ -1,0 +1,47 @@
+.container {
+    width: 100%;
+    max-width: 1260px;
+
+    &-wide {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding-left: 15px;
+        padding-right: 15px;
+
+        @media only screen and (max-width: 1400px) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    &--narrow {
+        max-width: 720px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    &--sm {
+        max-width: 990px;
+    }
+
+    &--mid {
+        max-width: 1024px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    &--xs {
+        max-width: 830px;
+    }
+
+    &--mobile-full-width {
+        @include media-breakpoint-down(sm) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+}

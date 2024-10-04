@@ -1,0 +1,156 @@
+.field-text {
+    $root: &;
+    --_input-top-padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    position: relative;
+
+    &__input-prefix {
+        color: #bbbbbb;
+        position: absolute;
+        left: 1rem;
+        top: calc(var(--_input-top-padding) - 1px);
+
+        & ~ #{$root}__input[type="tel"] {
+            padding-left: 3.75rem;
+        }
+    }
+
+    &__input-sufix {
+        color: var(--grey-900);
+        font-weight: 700;
+        position: absolute;
+        right: 1rem;
+        top: calc(var(--_input-top-padding) - 1px);
+
+        & ~ #{$root}__input[type="tel"] {
+            padding-right: 3.75rem;
+        }
+    }
+
+    &__input {
+        padding: var(--_input-top-padding) 1rem 1rem;
+        border-radius: 0.25rem;
+        margin: 0;
+        font-size: 1rem;
+        border: 1px solid var(--_border-color) !important;
+        background: var(--_background-color) !important;
+        cursor: text;
+
+        &:focus-visible {
+            outline: none;
+        }
+
+        &:focus:not(:read-only):not(:disabled),
+        &:focus-visible:not(:read-only):not(:disabled) {
+            --_border-color: var(--_selected-border-color);
+
+            ~ #{$root}__label {
+                color: var(--_selected-text-color);
+            }
+        }
+
+        &:not(:placeholder-shown):not(.content-editable),
+        &.content-editable:not(:empty),
+        &:focus:not(:read-only):not(:disabled),
+        &:focus-visible:not(:read-only):not(:disabled) {
+            ~ #{$root}__label {
+                transform: translateY(-0.5rem);
+                opacity: 1;
+            }
+        }
+
+        &.content-editable:not(:empty):disabled {
+            ~ #{$root}__label {
+                color: var(--grey-600);
+            }
+        }
+
+        &::placeholder {
+            color: var(--_text-color);
+        }
+
+        &:not(::placeholder) {
+            color: var(--grey-900);
+        }
+
+        &:read-only {
+
+            &,
+            ~ * {
+                --_label-text-color: var(--grey-500);
+                --_border-color: transparent;
+                --_text-color: var(--grey-700);
+                --_background-color: var(--grey-200);
+                cursor: not-allowed;
+            }
+
+            pointer-events: none;
+            color: var(--_text-color) !important;
+            background-color: transparent;
+
+            ~ #{$root}__label {
+                transform: translateY(-0.5rem);
+                opacity: 1;
+            }
+        }
+    }
+
+    &__label {
+        font-family: var(--a1-sans);
+        font-weight: 400;
+        font-size: 0.75rem;
+        line-height: 133%;
+        letter-spacing: 0.5px;
+        color: var(--_label-text-color) !important;
+        margin: 0;
+        position: absolute;
+        top: 0;
+        opacity: 0;
+        left: 0.875rem;
+        padding: 0 0.25rem !important;
+        transform: translateY(50%);
+        transition: transform ease-in-out 150ms, opacity ease-in-out 200ms;
+        background: var(--_label-background-color);
+        z-index: 10;
+    }
+
+    &__help-text {
+        font-family: var(--a1-sans);
+        font-weight: 400;
+        font-size: 0.75rem;
+        line-height: 133%;
+        letter-spacing: 0.5px;
+        padding-left: 1rem;
+        color: var(--_light-text-color);
+    }
+
+    &__icon {
+        position: absolute;
+        top: 1.25rem;
+        color: inherit;
+        color: var(--_border-color);
+
+        &--start {
+            left: 0.75rem;
+
+            ~ #{$root}__input {
+                padding-left: 2.75rem;
+            }
+        }
+
+        &--end {
+            right: 0.75rem;
+
+            ~ #{$root}__input {
+                padding-right: 2.75rem;
+            }
+        }
+
+        &--clear {
+            cursor: pointer;
+        }
+    }
+}

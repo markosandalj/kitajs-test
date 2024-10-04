@@ -1,0 +1,48 @@
+.text-color {
+    //grey
+    &-grey-100 {
+        color: var(--grey-100);
+    }
+
+    &-grey-200 {
+        color: var(--grey-200);
+    }
+
+    &-grey-300 {
+        color: var(--grey-300);
+    }
+
+    &-grey-400 {
+        color: var(--grey-400);
+    }
+
+    &-grey-500 {
+        color: var(--grey-500);
+    }
+
+    &-grey-600 {
+        color: var(--grey-600);
+    }
+
+    &-grey-700 {
+        color: var(--grey-700);
+    }
+
+    &-grey-800 {
+        color: var(--grey-800);
+    }
+
+    &-grey-900 {
+        color: var(--grey-900);
+    }
+
+    //blue
+    &-blue-500 {
+        color: var(--blue-500);
+    }
+
+    //red
+    &-red-primary {
+        color: var(--primary);
+    }
+}

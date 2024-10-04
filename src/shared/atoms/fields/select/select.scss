@@ -1,0 +1,51 @@
+.field-select {
+    $root: &;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    position: relative;
+
+    &__wrapper {
+        padding: 0 1rem;
+        border-radius: 0.25rem;
+        border: 1px solid var(--_border-color) !important; // @todo: remove important. It pains me to put important here but for now its neccessary
+        margin: 0;
+        background-color: var(--_background-color);
+        font-size: 1rem;
+    }
+
+    &__input {
+        padding: 1rem 0;
+        width: 100%;
+        cursor: pointer;
+
+        &:focus:not(:read-only):not(:disabled) {
+            --_border-color: var(--_selected-border-color);
+
+            ~ #{$root}__label {
+                color: var(--_selected-text-color);
+            }
+        }
+
+        &::placeholder {
+            color: var(--_text-color);
+        }
+
+        &:not(::placeholder) {
+            color: var(--grey-900);
+        }
+    }
+
+
+
+    &__help-text {
+        font-family: var(--a1-sans);
+        font-weight: 400;
+        font-size: 0.75rem;
+        line-height: 133%;
+        letter-spacing: 0.5px;
+        padding-left: 1rem;
+        color: var(--_light-text-color);
+    }
+}

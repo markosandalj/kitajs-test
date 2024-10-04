@@ -1,0 +1,32 @@
+.form-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    &[hidden] {
+        display: none;
+    }
+
+    &--row {
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+
+        @include media-breakpoint-down(xs) {
+            flex-direction: column;
+        }
+
+        > * {
+            flex: 1;
+            width: 100%;
+        }
+    }
+
+    &--gap-l {
+        gap: 2rem;
+    }
+
+    &--gap-m {
+        gap: 1.5rem;
+    }
+}

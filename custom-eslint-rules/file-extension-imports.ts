@@ -19,6 +19,8 @@ export const rule = createRule({
 				"Files starting with @webshop/ should be imported should only be imported in other files inside the webshop/ directory. If something is supposed to be shared between sites add it to shared/ folder",
 			companyweb:
 				"Files starting with @company-web/ should be imported should only be imported in other files inside the company-web/ directory. If something is supposed to be shared between sites add it to shared/ folder",
+			storybookhtml:
+				"Types shouldn't be imported directly from @storybook/html. Instead import them, and if needed re-export them from src/_storybook-only/utils/storybookTypes",
 		},
 		schema: [], // no options
 	},
@@ -79,6 +81,15 @@ export const rule = createRule({
 					context.report({
 						node,
 						messageId: "companyweb",
+					});
+				}
+
+				const isImportingStorybookHtmlTypes = node.source.value === "@storybook/html";
+				const isImportingToDesignatedRexportFile = context.filename === "storybookTypes.ts";
+				if (isImportingStorybookHtmlTypes && !isImportingToDesignatedRexportFile) {
+					context.report({
+						node,
+						messageId: "storybookhtml",
 					});
 				}
 			},

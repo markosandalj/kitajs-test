@@ -1,4 +1,4 @@
-import Button from "./button.template";
+import Button from "./Button.template";
 import { ButtonColor, type ButtonProps, ButtonSize, ButtonTag, ButtonVariant } from "./button.types";
 import ButtonListing, { type ButtonListingProps } from "./button.listing";
 import buttonsData from "./button.data";

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/html";
-import Availability, { AvailabilityProps } from "./availability.template";
+import Availability, { type AvailabilityProps } from "./availability.template";
 import { locationAutocompleteData } from "@shared/components/location-autocomplete/location-autocomplete.data";
 import { availabilityData } from "./availability.data";
 

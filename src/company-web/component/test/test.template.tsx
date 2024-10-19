@@ -1,6 +1,6 @@
 import type { ButtonColor } from "@shared/atoms/button/button.types";
 import { castToString } from "../../../_storybook-only/utils/castToString";
-import Button from "../../../shared/atoms/button/button.template";
+import Button from "../../../shared/atoms/button/Button.template";
 import EditableContentOverlay, {
 	type ContentTemplate,
 } from "../../../_storybook-only/EditableContentOverlay/EditableContentOverlay.template";

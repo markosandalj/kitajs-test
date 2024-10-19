@@ -1,4 +1,4 @@
-import Button from "@shared/atoms/button/button.template";
+import Button from "@shared/atoms/button/Button.template";
 import { ButtonColor, ButtonSize, ButtonTag, ButtonVariant } from "@shared/atoms/button/button.types";
 
 type LocationAutocompleteInput = JSX.HtmlInputTag & {

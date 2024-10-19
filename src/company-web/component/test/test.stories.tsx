@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "src/_storybook-only/utils/storybookTypes";
-import Test, { type TestProps } from "./test.template";
+import Test, { type TestProps } from "./Test.template";
 import { ButtonColor } from "@shared/atoms/button/button.types";
 
 const meta: Meta<TestProps> = {

@@ -1,5 +1,5 @@
 import LocationAutocomplete, {
-	LocationAutocompleteProps,
+	type LocationAutocompleteProps,
 } from "@shared/components/location-autocomplete/location-autocomplete.template";
 
 export type AvailabilityProps = {

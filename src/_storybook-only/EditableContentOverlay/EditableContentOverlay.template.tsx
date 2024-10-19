@@ -1,4 +1,4 @@
-import { castToString } from "../../_storybook-only/utils/castToString";
+import { castToString } from "../utils/castToString";
 
 export type ContentTemplate<T extends object> = { content: T; showContentOverlay: boolean };
 

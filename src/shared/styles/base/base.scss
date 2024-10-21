@@ -1,10 +1,11 @@
 @import "reset";
 @import "typography";
 @import "colors";
+@import "./DEPRECATED_typography";
 @import "text-colors";
 @import "spacings";
 @import "form-layout";
 
 body {
-    font-family: var(--a1-sans);
+	font-family: var(--a1-sans);
 }

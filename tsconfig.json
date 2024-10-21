@@ -8,6 +8,7 @@
 			"@icons/*": ["./public/icons/*"],
 			"@company-web/*": ["./src/company-web/*"],
 			"@webshop/*": ["./src/webshop/*"],
+			"@storybook-only/*": ["./src/_storybook-only/*"],
 			"@shared/*": ["./src/shared/*"]
 		},
 		"forceConsistentCasingInFileNames": true,

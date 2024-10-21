@@ -35,6 +35,9 @@ export const ButtonPrimary: StoryObj<ButtonProps> = {
 		label: "Button Primary",
 		tag: "a",
 		size: "extra-small",
+		test: {
+			test: "asd",
+		},
 	},
 };
 

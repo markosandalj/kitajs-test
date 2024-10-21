@@ -1,0 +1,75 @@
+@import "./partials/zigzag-item/zigzag-item.scss";
+
+.campaign {
+	padding-bottom: 7rem;
+
+	&__intro {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 0.5rem;
+		text-align: center;
+		padding: 7rem 0 4rem;
+
+		@include media-breakpoint-down(sm) {
+			padding: 5.625rem 0 4rem;
+		}
+	}
+
+	&__intro-eyebrow {
+		text-transform: uppercase;
+		font-size: 1rem;
+		font-weight: 700;
+		color: #da291c;
+	}
+
+	&__title {
+		font-family: $serif;
+		font-size: 2.75rem;
+		font-weight: 700;
+
+		@include media-breakpoint-down(sm) {
+			font-size: 2rem;
+		}
+	}
+
+	&__video-wrapper {
+		video {
+			border-radius: 1.5rem;
+		}
+	}
+
+	&__zigzag-intro {
+		font-size: 1.75rem;
+		font-weight: 700;
+		text-align: center;
+		margin-block: 4rem;
+		color: $primary;
+
+		@include media-breakpoint-down(sm) {
+			font-size: 1.125rem;
+		}
+	}
+
+	&__zig-zag-section {
+		display: flex;
+		flex-direction: column;
+		gap: 7rem;
+		position: relative;
+
+		@include media-breakpoint-down(sm) {
+			gap: 4rem;
+		}
+	}
+
+	&__zigzag-background {
+		position: absolute;
+		inset: 0;
+		z-index: 0 !important;
+		pointer-events: none;
+	}
+
+	&__red {
+		color: #da291c;
+	}
+}

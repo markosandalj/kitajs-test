@@ -1,0 +1,92 @@
+$default: "a1", "Helvetica Neue", "Arial", "sans-serif";
+$condensed: "a1-condensed", "Helvetica Neue", "Arial", "sans-serif";
+$serif: "a1-serif", "Georgia", "sans-serif", "serif";
+$youth: "a1-youth", "Urban Brigade", "sans-serif", "serif";
+$youth-secondary: "a1-youth-secondary", "Kuusinollakahdeksan", "sans-serif", "serif";
+
+$fw-light: 300;
+$fw-normal: 400;
+$fw-bold: 700;
+
+$fs-xxs: 0.625rem; // 10px
+$fs-xs: 0.75rem; // 12px
+$fs-sm: 0.875rem; // 14px
+$fs-base: 1rem; // 16px
+$fs-lg: 1.125rem; // 18px
+$fs-xl: 1.25rem; // 20px
+$fs-2xl: 1.5rem; // 24px
+$fs-3xl: 1.875rem; // 30px
+$fs-4xl: 2.25rem; // 36px
+$fs-5xl: 3rem; // 48px
+$fs-55xl: 3.5rem; // 56px
+$fs-6xl: 4rem; // 64px
+$fs-7xl: 6rem; // 64px
+
+body {
+	font-family: $default !important;
+}
+
+.serif {
+	font-family: $serif !important;
+}
+
+// Fix for CK editor text alignment
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	width: 100%;
+	text-transform: none;
+	font-family: inherit;
+}
+
+h1 {
+	font-size: 3rem;
+}
+
+h2 {
+	font-size: 2.5rem;
+}
+
+h3 {
+	font-size: 2rem;
+}
+
+h4 {
+	font-size: 1.5rem;
+}
+
+h5 {
+	font-size: 1rem;
+}
+
+h6 {
+	font-size: 0.75rem;
+}
+
+.gradient-text-blue {
+	background: $blue-banner;
+	color: transparent;
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-webkit-box-decoration-break: clone;
+
+	&:after {
+		position: absolute;
+		content: attr(title);
+		display: block;
+		background: $blue-banner;
+		color: transparent;
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+}
+
+.font-weight-bold {
+	font-weight: $fw-bold !important;
+}
